@@ -15,6 +15,12 @@ Aqui está um exemplo de funcionamento:
 ✅ **Marcando tarefas como concluídas**, excluindo e filtrando tarefas por status:
 ![Filtro de Tarefas](https://github.com/user-attachments/assets/95ab9d45-a891-4433-8510-0f6a5b6673fc)
 
+⚠️ **Colocando Prioridade nas tarefas**
+ - 🟡 = Baixa Prioridade/ 🟠 = Normal ou Prioridade Média / 🔴 = Alta Prioridade
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/28472f85-a6ca-4d37-9db2-4c148de79fd2" width="500" alt="Screenshot">
+</p>
 
  📝**Exibindo tarefas pendentes:**  
 
