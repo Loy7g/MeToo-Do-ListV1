@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MeToo-Do List é uma lista de tarefas simples e minimalista, com funcionalidades de adicionar, remover, marcar como concluída e filtrar tarefas.">
+    <!-- Ícone do site -->
+    <link rel="icon" href="html.png" type="image/png">
+    <!-- Título do site -->
+    <title>MeToo-Do List</title>
+    <!-- Estilo do site -->
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+<body>
+    <div class="container">
+        <h2>MeToo-Do List</h2>
+
+        <!-- Campo de entrada para nova tarefa -->
+        <input type="text" id="taskInput" placeholder="Nova tarefa">
+
+        <!-- Campos para data e prioridade -->
+        <input type="date" id="taskDueDate">
+        <select id="taskPriority">
+            <option value="low">Baixa</option>
+            <option value="normal">Normal</option>
+            <option value="high">Alta</option>
+        </select>
+
+        <!-- Botões de ação -->
+        <button onclick="addTask()">Adicionar</button>
+        <button id="toggleDarkMode">🌙</button>
+
+        <!-- Filtros de tarefas -->
+        <label for="filter">Filtrar:</label>
+        <select id="filter" onchange="filterTasks()">
+            <option value="all">Todas</option>
+            <option value="pending">Pendentes</option>
+            <option value="completed">Concluídas</option>
+        </select>
+
+        <!-- Botão de Play/Pause para música com emojis -->
+        <button id="playPauseBtn">
+            <span id="play">🎶</span>
+        </button>
+
+        <!-- Lista de tarefas -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Footer com o botão de deletar todas as tarefas -->
+    <footer>
+        <button id="deleteAllBtn">Deletar todas as tarefas</button>
+    </footer>
+
+    <!-- Áudio do site-->
+    <audio id="lofi" src="assets/musicas/MUSICA SEM DIREITOS AUTORAIS - SONG NO COPYRIGHT   Lofi hip hop beat.mp3" loop></audio>
+
+    <!-- Scripts do arquivo Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>

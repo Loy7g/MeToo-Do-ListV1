@@ -1,0 +1,334 @@
+/* Estilos gerais para o body, com fontes e cores padrão */
+body {
+    font-family: Arial, sans-serif; /* Definindo a fonte para a página */
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove o padding padrão */
+    transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave para as mudanças de cor */
+    background-color: white; /* Cor de fundo padrão */
+    color: black; /* Cor do texto */
+}
+
+/* Contêiner principal que mantém o conteúdo centralizado e com padding */
+.container {
+    max-width: 400px; /* Limita a largura máxima */
+    margin: auto; /* Centraliza o conteúdo */
+    padding: 20px; /* Adiciona espaço interno */
+}
+
+/* Estilos para listas sem estilo (removendo os pontos) */
+ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
+}
+
+/* Estilo dos itens da lista */
+li {
+    display: flex; /* Usamos flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 1px solid #ccc; /* Linha de separação */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço entre os itens */
+    background-color: #fff; /* Cor de fundo padrão */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra para dar profundidade */
+    transition: background-color 0.3s, border-color 0.3s, opacity 0.3s ease; /* Transições para o efeito de hover */
+}
+
+/* Estilo para itens marcados como feitos */
+.done {
+    text-decoration: line-through; /* Texto riscado */
+    color: #888; /* Cor mais clara */
+}
+
+/* Esconde os itens com a classe 'hidden' */
+li.hidden {
+    display: none; /* Remove o item da visualização */
+    transition: none; /* Desativa transições */
+}
+
+/* Estilo dos botões */
+button {
+    margin-left: 5px; /* Margem à esquerda */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 8px 15px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    border: none; /* Remove bordas */
+    background-color: #494848; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição para efeitos visuais */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #6d6d6d; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+}
+
+/* Estilos para inputs e selects */
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    outline: none; /* Remove o contorno padrão do navegador */
+    background-color: #f9f9f9; /* Cor de fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    font-size: 12px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    transition: all 0.3s ease; /* Transição suave para qualquer alteração */
+}
+
+/* Foco no input */
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #666; /* Altera a cor da borda */
+    box-shadow: 0 0 8px rgba(100, 100, 100, 0.5); /* Efeito de foco */
+    background-color: #fff; /* Muda a cor de fundo ao focar */
+}
+
+/* Estilo de um item de tarefa */
+.todo-item {
+    margin: 10px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaço interno */
+    background-color: #f4f4f4; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+/* Estilo do item de tarefa ao arrastar */
+.todo-item.dragging {
+    opacity: 0.5; /* Diminui a opacidade */
+}
+
+/* Estilos para o botão de play/pause */
+#playPauseBtn {
+    background-color: #f1f1f1; /* Cor de fundo */
+    border: none; /* Remove borda */
+    padding: 6px 7px; /* Espaçamento interno */
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif; /* Fonte do ícone */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Altera o cursor */
+    transition: background-color 0.3s, color 0.3s; /* Transições para o efeito de hover */
+    display: inline-flex; /* Alinha os ícones dentro do botão */
+    align-items: center;
+    justify-content: center;
+    margin: 12px; /* Espaçamento ao redor */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilo para o ícone dentro do botão */
+#playPauseBtn i {
+    color: black; /* Cor do ícone */
+    font-size: 18px; /* Tamanho do ícone */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+/* Estilos para a data da tarefa */
+.task-date {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 0.8em; /* Tamanho da fonte reduzido */
+    color: #666; /* Cor mais clara */
+    opacity: 0.8; /* Torna um pouco transparente */
+}
+
+/* Quebra de linha nas tarefas */
+.task-text-wrap {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    max-width: 100%; /* Garante que não ultrapasse o limite */
+}
+
+/* Tarefas com rolagem interna */
+.task-text-scroll {
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: auto; /* Habilita rolagem */
+    max-height: 60px; /* Limita a altura */
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #121212; /* Cor de fundo escura */
+    color: white; /* Cor do texto clara */
+}
+
+/* Estilo para o modo escuro nos itens da lista */
+body.dark-mode li {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    border-color: #444; /* Borda escura */
+}
+
+/* Estilo para o botão no modo escuro */
+body.dark-mode button {
+    background-color: #3a3a3a; /* Cor de fundo do botão */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Sombra suave */
+}
+
+/* Hover no botão no modo escuro */
+body.dark-mode button:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra mais forte */
+}
+
+/* Estilos para inputs no modo escuro */
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"],
+body.dark-mode select {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    border: 1px solid #444; /* Borda escura */
+    color: white; /* Texto claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra forte */
+}
+
+/* Foco nos inputs no modo escuro */
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="date"]:focus,
+body.dark-mode select:focus {
+    border-color: #888; /* Cor da borda em foco */
+    box-shadow: 0 0 8px rgba(200, 200, 200, 0.4); /* Sombra em foco */
+    background-color: #2a2a2a; /* Cor de fundo mais escura */
+}
+
+/* Estilo para o botão de play/pause no modo escuro */
+body.dark-mode #playPauseBtn {
+    background-color: #444; /* Cor de fundo escura */
+}
+
+/* Cor do ícone no botão de play/pause */
+body.dark-mode #playPauseBtn i {
+    color: white; /* Ícone branco */
+}
+
+/* Cor da data da tarefa no modo escuro */
+body.dark-mode .task-date {
+    color: #aaa; /* Cor mais clara */
+}
+
+/* Estilos para a container dos botões */
+.button-container {
+    display: flex; /* Exibe os botões em linha */
+    gap: 5px; /* Espaço entre os botões */
+    margin-left: auto; /* Empurra os botões para a direita */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo do botão de deletar tudo */
+#deleteAllBtn {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #c44; /* Cor de fundo vermelha */
+    color: white; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Hover no botão de deletar tudo */
+#deleteAllBtn:hover {
+    background-color: #a33; /* Cor do botão ao passar o mouse */
+}
+
+.todo-item {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Telas de dispositivos móveis (celulares) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Tamanho de fonte ajustado para dispositivos menores */
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 100%; /* Garantir que a largura da container ocupe toda a tela */
+    }
+
+    ul {
+        padding-left: 10px 10px; /* Menor espaçamento à esquerda */
+        margin: auto; /* Centraliza os itens da lista */
+    }
+
+    li {
+        font-size: 14px; /* Ajuste do tamanho da fonte para itens da lista */
+        padding: 8px; /* Menor espaçamento interno */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 6px 10px; /* Ajuste do tamanho do botão */
+    }
+
+    input[type="text"], input[type="date"], select {
+        font-size: 12px; /* Ajuste do tamanho da fonte nos inputs */
+        padding: 6px; /* Ajuste do tamanho do preenchimento */
+    }
+
+    .button-container {
+        flex-direction: column; /* Organiza os botões em coluna */
+        align-items: flex-start; /* Alinha os botões à esquerda */
+    }
+
+    footer {
+        font-size: 12px; /* Ajusta o tamanho da fonte no rodapé */
+    }
+
+    .todo-item {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+}
+
+/* Telas de tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Ajuste para tablet */
+    }
+
+    .container {
+        max-width: 90%; /* Limita a largura da container para não ficar tão grande */
+    }
+
+    ul {
+        padding-left: 15px 15px; /* Aumenta o espaçamento à esquerda */
+    }
+
+    li {
+        font-size: 16px; /* Aumenta o tamanho da fonte para itens da lista */
+        padding: 10px; /* Aumenta o espaçamento interno */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 14px; /* Aumenta o tamanho do botão */
+    }
+
+    input[type="text"], input[type="date"], select {
+        font-size: 16px; /* Aumenta o tamanho da fonte nos inputs */
+        padding: 10px; /* Aumenta o preenchimento nos inputs */
+    }
+
+    .button-container {
+        flex-direction: row; /* Organiza os botões em linha */
+        gap: 10px; /* Cria um espaço entre os botões */
+    }
+
+    footer {
+        font-size: 14px; /* Ajuste o tamanho da fonte no rodapé */
+    }
+
+    .todo-item {
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+}
