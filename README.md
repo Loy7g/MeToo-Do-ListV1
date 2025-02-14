@@ -1,4 +1,4 @@
-Bem-Vindos a primeira versão da minha TO-DO List que apelide de MeToo-Do List
+Bem-Vindos a primeira versão da minha TO-DO List que apelidei de MeToo-Do List
 
 Esse é um modelo dela de funcionamento, como podem ver vocês podem adiconar Datas para uma melhor organização:
 
