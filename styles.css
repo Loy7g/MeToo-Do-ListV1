@@ -256,6 +256,13 @@ footer {
         max-width: 100%; /* Garantir que a largura da container ocupe toda a tela */
     }
 
+    .task-date {
+        margin-left: 10px; /* Margem à esquerda */
+        font-size: 0.8em; /* Tamanho da fonte reduzido */
+        color: #666; /* Cor mais clara */
+        opacity: 0.8; /* Torna um pouco transparente */
+    }
+
     ul {
         padding-left: 10px 10px; /* Menor espaçamento à esquerda */
         margin: auto; /* Centraliza os itens da lista */
@@ -294,6 +301,14 @@ footer {
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     body {
         font-size: 16px; /* Ajuste para tablet */
+    }
+
+
+    .task-date {
+        margin-left: 10px; /* Margem à esquerda */
+        font-size: 0.8em; /* Tamanho da fonte reduzido */
+        color: #666; /* Cor mais clara */
+        opacity: 0.8; /* Torna um pouco transparente */
     }
 
     .container {
